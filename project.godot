@@ -15,12 +15,13 @@ config/description="cats cats cats"
 run/main_scene="uid://bc322eh540d18"
 config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=60
+config/icon="uid://dmjbceolnl5y5"
 
 [display]
 
 window/size/viewport_width=320
 window/size/viewport_height=240
-window/size/mode=3
+window/size/mode=4
 window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/scale_mode="integer"
