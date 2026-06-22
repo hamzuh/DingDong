@@ -2,16 +2,11 @@ extends CharacterBody2D
 
 @onready var animation = $AnimatedSprite2D
 
-@export var speed = 80
+@export var speed = 90
+var last_direct = Vector2(0, 1)
 
 func get_input():
 	var direction = Input.get_vector("left", "right", "up", "down")
-	
-	# Flip sidewalk
-	#if direction.x < 0:
-		#$"../../Sprite2D".flip_h = false
-	#elif direction.x > 0:
-		#$"../../Sprite2D".flip_h = true
 	
 	for dr in range(2):
 		if direction[dr] > 0.5:
@@ -22,16 +17,48 @@ func get_input():
 			direction[dr] = 0
 
 	# Hmm
-	#direction.y *= 0.8
+	direction.y *= 0.75
+	#direction = direction.normalized()
 	
 	velocity = direction * speed
 	
 	# Animation stuff
 	
-	if direction:
-		animation.play("walk_down")
-	else:
-		animation.play("idle")
+	# Flip sidewalk
+	if direction.x < 0:
+		animation.play("walk_side")
+		animation.flip_h = true
+		# This is unbelievably bad
+		last_direct = "left"
+	elif direction.x > 0:
+		animation.play("walk_side")
+		animation.flip_h = false
+		last_direct = "right"
+	
+	if not direction.x:
+		if direction.y > 0:
+			animation.flip_h = false
+			animation.play("walk_down")
+			last_direct = "down"
+		elif direction.y < 0:
+			animation.flip_h = false
+			animation.play("walk_up")
+			last_direct = "up"
+		
+	if not direction:
+		match last_direct:
+			"left":
+				animation.play("idle_side")
+				animation.flip_h = true
+			"right":
+				animation.play("idle_side")
+				animation.flip_h = false
+			"down":
+				animation.play("idle_down")
+				animation.flip_h = false
+			"up":
+				animation.play("idle_up")
+				animation.flip_h = false
 	
 func _physics_process(delta: float) -> void:
 	get_input()

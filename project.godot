@@ -14,16 +14,16 @@ config/name="TOP SECRET PISTACHIOS"
 config/description="cats cats cats"
 run/main_scene="uid://bc322eh540d18"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="uid://b3o432yuyhow5"
+run/max_fps=60
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=960
+window/size/viewport_width=320
+window/size/viewport_height=240
 window/size/mode=3
 window/size/resizable=false
-window/stretch/mode="viewport"
-window/stretch/scale=4.0
+window/stretch/mode="canvas_items"
+window/stretch/scale_mode="integer"
 
 [input]
 
