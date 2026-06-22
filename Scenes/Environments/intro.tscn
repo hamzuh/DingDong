@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://d2duqcdlgrktw"]
+
+[ext_resource type="Texture2D" uid="uid://dkkwkhbrugvd7" path="res://Art/Environments/Intro/introlevel.png" id="1_6uoje"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_234s4"]
+size = Vector2(99, 20)
+
+[node name="Intro" type="StaticBody2D" unique_id=1562983653]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=942433868]
+texture = ExtResource("1_6uoje")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=816881296]
+polygon = PackedVector2Array(-3, 122, 6, 46, -24, 44, -54, 41, -84, 21, -100, 3, -105, -31, -85, -55, -53, -70, -17, -79, 7, -78, 45, -77, 88, -63, 104, -37, 115, -2, 108, 25, 85, 39, 37, 45, 36, 123, 184, 132, 173, -150, -174, -138, -178, 139, -12, 139, -4, 124)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2050132497]
+position = Vector2(20, 130)
+shape = SubResource("RectangleShape2D_234s4")

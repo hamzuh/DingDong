@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bc322eh540d18"]
+
+[ext_resource type="PackedScene" uid="uid://d2duqcdlgrktw" path="res://Scenes/Environments/intro.tscn" id="1_daojo"]
+[ext_resource type="Script" uid="uid://5y014wjl5yq7" path="res://Scenes/Misc/base.gd" id="1_ftiab"]
+[ext_resource type="PackedScene" uid="uid://7tokkplqte2g" path="res://Scenes/Characters/Mitku.tscn" id="2_ftiab"]
+
+[node name="Base" type="Node" unique_id=1646494907]
+script = ExtResource("1_ftiab")
+
+[node name="Intro" parent="." unique_id=1562983653 instance=ExtResource("1_daojo")]
+
+[node name="Mitku" parent="." unique_id=79927494 instance=ExtResource("2_ftiab")]
+position = Vector2(5, -33)
