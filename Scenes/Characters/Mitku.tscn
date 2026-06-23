@@ -58,13 +58,13 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("8_apwlp")
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_1dvus")
 }, {
-"duration": 2.0,
+"duration": 1.0,
 "texture": ExtResource("10_t8kpo")
 }, {
 "duration": 1.0,
@@ -72,7 +72,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_side",
-"speed": 7.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.5,
@@ -96,6 +96,7 @@ animations = [{
 size = Vector2(28, 8)
 
 [node name="Mitku" type="CharacterBody2D" unique_id=79927494]
+floor_constant_speed = true
 script = ExtResource("1_fq3pm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=121018256]
