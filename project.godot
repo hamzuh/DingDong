@@ -15,6 +15,7 @@ config/description="cats cats cats"
 run/main_scene="uid://bc322eh540d18"
 config/features=PackedStringArray("4.6", "Forward Plus")
 run/max_fps=60
+boot_splash/image="uid://dmjbceolnl5y5"
 config/icon="uid://dmjbceolnl5y5"
 
 [display]
@@ -23,7 +24,7 @@ window/size/viewport_width=320
 window/size/viewport_height=240
 window/size/mode=4
 window/size/resizable=false
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 
 [input]
@@ -74,3 +75,4 @@ exit={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+2d/snap/snap_2d_transforms_to_pixel=true

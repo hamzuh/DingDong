@@ -2,12 +2,16 @@ extends CharacterBody2D
 
 @onready var animation = $AnimatedSprite2D
 
-@export var speed = 90
-var last_direct = Vector2(0, 1)
+@export var speed = 80
+
+var direction: Vector2
+var last_direct = "down"
+var last_direct_vector: Vector2
 
 func get_input():
-	var direction = Input.get_vector("left", "right", "up", "down")
+	direction = Input.get_vector("left", "right", "up", "down")
 	
+	# Parse as flat unnormalised 8-way movement
 	for dr in range(2):
 		if direction[dr] > 0.5:
 			direction[dr] = 1
@@ -15,14 +19,22 @@ func get_input():
 			direction[dr] = -1
 		else:
 			direction[dr] = 0
-
-	# Hmm
-	direction.y *= 0.75
-	#direction = direction.normalized()
+	
+	if direction:
+		last_direct_vector = direction
+	
+	# Scale the diagonal speed down a bit
+	# Not fully normalised because that's boring
+	if direction.x and direction.y:
+		direction = direction.limit_length(1.2)
 	
 	velocity = direction * speed
 	
 	# Animation stuff
+	
+	#if direction:
+		#if direction.dot(last_direct_vector) <= 0:
+			
 	
 	# Flip sidewalk
 	if direction.x < 0:

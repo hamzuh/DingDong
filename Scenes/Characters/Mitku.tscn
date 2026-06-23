@@ -41,13 +41,13 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("5_osciq")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_2k1nj")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("7_ox1kv")
 }, {
 "duration": 1.0,
@@ -58,13 +58,13 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("8_apwlp")
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_1dvus")
 }, {
-"duration": 1.0,
+"duration": 2.0,
 "texture": ExtResource("10_t8kpo")
 }, {
 "duration": 1.0,
@@ -72,16 +72,16 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk_side",
-"speed": 5.0
+"speed": 7.0
 }, {
 "frames": [{
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("11_4drvp")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_5rf40")
 }, {
-"duration": 1.0,
+"duration": 1.5,
 "texture": ExtResource("12_qcfi1")
 }, {
 "duration": 1.0,
@@ -100,7 +100,7 @@ script = ExtResource("1_fq3pm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=121018256]
 sprite_frames = SubResource("SpriteFrames_6w5s7")
-animation = &"idle_down"
+animation = &"walk_side"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418113069]
 position = Vector2(0, 12)
