@@ -80,7 +80,10 @@ func animate():
 				animation.play("walk_up")
 				last_direct = "up"
 			locked = true
-			
+	
+	# Unsure about this commented version
+	# Looks a little inconsistent	
+	#if not unscaled_direction or self.get_real_velocity().length() < 0.1:
 	if not unscaled_direction:
 		locked = false
 		match last_direct:
