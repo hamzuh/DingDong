@@ -1,0 +1,9 @@
+extends Level
+
+func _on_top_door_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		exit.emit(room_name, "TopDoor", body)
+
+func _on_bottom_door_body_entered(body: Node2D) -> void:
+	if body.is_in_group("Player"):
+		exit.emit(room_name, "BottomDoor", body)

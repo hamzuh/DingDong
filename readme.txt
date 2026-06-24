@@ -5,3 +5,20 @@ TO DO:
 		- squidge down
 		- check phone
 		- put headphones in
+	- autoload for tracking progress?
+	- map transitions
+		- area2d checks for exit / enter collision
+		- maphandler node
+			- recieves signals
+				- the maphandler contains all the links betweens rooms
+				- rooms stay dumb
+			- handles screen fade
+			- sets camera limits
+	- text box stuff
+		- item interactions
+		- dialogue
+			- pause game while speaking?
+	- cutscenes
+		- use animationplayer
+		- lock player actions
+	- saving and loading

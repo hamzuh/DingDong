@@ -18,6 +18,10 @@ run/max_fps=60
 boot_splash/image="uid://d1bdaeeqptkps"
 config/icon="uid://dmjbceolnl5y5"
 
+[audio]
+
+buses/default_bus_layout="uid://cf63qd0mpmgb1"
+
 [display]
 
 window/size/viewport_width=320

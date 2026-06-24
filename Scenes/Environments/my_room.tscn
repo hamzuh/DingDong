@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://cjhduo6srdbtm"]
+
+[ext_resource type="Texture2D" uid="uid://bx7jjjtu55js0" path="res://Art/Environments/myroom.png" id="1_dk4s6"]
+[ext_resource type="Script" uid="uid://bl1d62mn7oq58" path="res://Scripts/Levels/my_room.gd" id="1_w3fuf"]
+[ext_resource type="AudioStream" uid="uid://dmmc7ugihxoge" path="res://Audio/Music/FLIPSIDEMUTHAFUCKA.wav" id="2_w3fuf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_22upm"]
+size = Vector2(140, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w3fuf"]
+size = Vector2(138, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dk4s6"]
+size = Vector2(326, 25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hdxwg"]
+size = Vector2(25, 153)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewfsj"]
+size = Vector2(27, 157)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kl1yk"]
+size = Vector2(78, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gevid"]
+size = Vector2(72, 25)
+
+[node name="My Room" type="StaticBody2D" unique_id=1931396478]
+script = ExtResource("1_w3fuf")
+room_name = "My Room"
+theme = ExtResource("2_w3fuf")
+door_dict = Dictionary[String, Vector2]({
+"TopDoor": Vector2(-4, -106)
+})
+limit_enabled = true
+limit_left = -160
+limit_top = -120
+limit_right = 160
+limit_bottom = 120
+metadata/_custom_type_script = "uid://bi527pg4lq57d"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=29082908]
+texture = ExtResource("1_dk4s6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=730073077]
+position = Vector2(91, -84.5)
+shape = SubResource("RectangleShape2D_22upm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=215997457]
+position = Vector2(-101, -86)
+shape = SubResource("RectangleShape2D_w3fuf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=2133521896]
+position = Vector2(0, 108.5)
+shape = SubResource("RectangleShape2D_dk4s6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=99013939]
+position = Vector2(151.5, 20.5)
+shape = SubResource("RectangleShape2D_hdxwg")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=1070125684]
+position = Vector2(-149.5, 21.5)
+shape = SubResource("RectangleShape2D_ewfsj")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="." unique_id=393265583]
+position = Vector2(0, -130)
+shape = SubResource("RectangleShape2D_kl1yk")
+
+[node name="TopDoor" type="Area2D" parent="." unique_id=1757052658]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopDoor" unique_id=622790634]
+position = Vector2(0, -116.5)
+shape = SubResource("RectangleShape2D_gevid")
+
+[connection signal="body_entered" from="TopDoor" to="." method="_on_top_door_body_entered"]

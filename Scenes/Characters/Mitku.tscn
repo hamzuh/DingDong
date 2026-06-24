@@ -95,20 +95,14 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8hitm"]
 size = Vector2(28, 8)
 
-[node name="Mitku" type="CharacterBody2D" unique_id=79927494]
+[node name="Mitku" type="CharacterBody2D" unique_id=79927494 groups=["Player"]]
 floor_constant_speed = true
 script = ExtResource("1_fq3pm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=121018256]
 sprite_frames = SubResource("SpriteFrames_6w5s7")
-animation = &"walk_side"
+animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418113069]
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_8hitm")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=436854013]
-limit_left = -120
-limit_top = 160
-limit_right = 120
-limit_bottom = -160
