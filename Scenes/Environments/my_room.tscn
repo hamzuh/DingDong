@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bx7jjjtu55js0" path="res://Art/Environments/myroom.png" id="1_dk4s6"]
 [ext_resource type="Script" uid="uid://bl1d62mn7oq58" path="res://Scripts/Levels/my_room.gd" id="1_w3fuf"]
 [ext_resource type="AudioStream" uid="uid://dmmc7ugihxoge" path="res://Audio/Music/FLIPSIDEMUTHAFUCKA.wav" id="2_w3fuf"]
+[ext_resource type="PackedScene" uid="uid://ccgglyt701dw8" path="res://Scenes/Characters/Minnie.tscn" id="4_hdxwg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22upm"]
 size = Vector2(140, 77)
@@ -71,5 +72,8 @@ shape = SubResource("RectangleShape2D_kl1yk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TopDoor" unique_id=622790634]
 position = Vector2(0, -116.5)
 shape = SubResource("RectangleShape2D_gevid")
+
+[node name="StaticBody2D" parent="." unique_id=803149518 instance=ExtResource("4_hdxwg")]
+position = Vector2(-90, -18)
 
 [connection signal="body_entered" from="TopDoor" to="." method="_on_top_door_body_entered"]

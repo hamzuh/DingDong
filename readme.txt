@@ -18,6 +18,9 @@ TO DO:
 		- item interactions
 		- dialogue
 			- pause game while speaking?
+			- randomise talk noise
+				- pitch
+				- volume
 	- cutscenes
 		- use animationplayer
 		- lock player actions

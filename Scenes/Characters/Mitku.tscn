@@ -104,5 +104,6 @@ sprite_frames = SubResource("SpriteFrames_6w5s7")
 animation = &"walk_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1418113069]
+y_sort_enabled = true
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_8hitm")

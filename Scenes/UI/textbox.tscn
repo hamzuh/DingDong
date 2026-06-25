@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://b2a6nxt8806k"]
 
 [ext_resource type="Texture2D" uid="uid://c26281n1r6d8i" path="res://Art/UI/textBorder.png" id="1_apdxd"]
-[ext_resource type="Texture2D" uid="uid://2v2n130ui65b" path="res://Art/Mitku/alt_clothes.png" id="2_8eaaq"]
+[ext_resource type="Script" uid="uid://dhxq417glrq0n" path="res://Scripts/Dialogue/DialogueSystem.gd" id="1_sve5v"]
 [ext_resource type="FontFile" uid="uid://do1h3b6n48p4k" path="res://Art/Misc/Fonts/m6x11.ttf" id="2_equbo"]
+[ext_resource type="Texture2D" uid="uid://dvwv4w6twrmps" path="res://Art/Mitku/Walk/Down/mitku01.png" id="3_sve5v"]
 
 [sub_resource type="Theme" id="Theme_8eaaq"]
 default_font = ExtResource("2_equbo")
@@ -17,6 +18,7 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_sve5v")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1817359027]
 layout_mode = 0
@@ -41,7 +43,7 @@ offset_bottom = 30.0
 [node name="Portrait" type="TextureRect" parent="HBoxContainer" unique_id=717110317]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("2_8eaaq")
+texture = ExtResource("3_sve5v")
 stretch_mode = 5
 
 [node name="Text" type="RichTextLabel" parent="HBoxContainer" unique_id=132359046]

@@ -2,13 +2,25 @@ extends CharacterBody2D
 
 @onready var animation = $AnimatedSprite2D
 
+# Movement Variables
 @export var speed = 80
-
 var can_move: bool = true
 var direction: Vector2
 var unscaled_direction: Vector2
 var last_direct = "down"
 var locked: bool = false
+
+# Dialogue Variables
+var talk: bool = false
+var target = null
+var speaking: bool = false
+
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("interact"):
+		if talk and target and not speaking:
+			set_can_move(false)
+			speaking = true
+			target.dialogue_start()
 
 func get_input():
 	if can_move:
