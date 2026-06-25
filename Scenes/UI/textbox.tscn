@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b2a6nxt8806k"]
+
+[ext_resource type="Texture2D" uid="uid://c26281n1r6d8i" path="res://Art/UI/textBorder.png" id="1_apdxd"]
+[ext_resource type="Texture2D" uid="uid://2v2n130ui65b" path="res://Art/Mitku/alt_clothes.png" id="2_8eaaq"]
+[ext_resource type="FontFile" uid="uid://do1h3b6n48p4k" path="res://Art/Misc/Fonts/m6x11.ttf" id="2_equbo"]
+
+[sub_resource type="Theme" id="Theme_8eaaq"]
+default_font = ExtResource("2_equbo")
+default_font_size = 16
+
+[node name="Control" type="Control" unique_id=281701047]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1817359027]
+layout_mode = 0
+offset_left = -150.0
+offset_top = -35.0
+offset_right = 150.0
+offset_bottom = 35.0
+texture = ExtResource("1_apdxd")
+region_rect = Rect2(0, 0, 6, 6)
+patch_margin_left = 2
+patch_margin_top = 2
+patch_margin_right = 2
+patch_margin_bottom = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=707955790]
+layout_mode = 0
+offset_left = -145.0
+offset_top = -30.0
+offset_right = 145.0
+offset_bottom = 30.0
+
+[node name="Portrait" type="TextureRect" parent="HBoxContainer" unique_id=717110317]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("2_8eaaq")
+stretch_mode = 5
+
+[node name="Text" type="RichTextLabel" parent="HBoxContainer" unique_id=132359046]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_8eaaq")
+theme_override_constants/line_separation = 1
+bbcode_enabled = true
+text = "* I'LL ALWAYS REMEMBER THAT YOU REMEMBERED!"
+scroll_active = false
+visible_characters_behavior = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=1928498839]
+
+[node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1863913414]
+max_polyphony = 5
+bus = &"Dialogue"
