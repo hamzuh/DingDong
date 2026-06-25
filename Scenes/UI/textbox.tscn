@@ -57,7 +57,7 @@ scroll_active = false
 visible_characters_behavior = 1
 
 [node name="Timer" type="Timer" parent="." unique_id=1928498839]
+one_shot = true
 
 [node name="Voice" type="AudioStreamPlayer" parent="." unique_id=1863913414]
 max_polyphony = 5
-bus = &"Dialogue"

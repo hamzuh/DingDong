@@ -28,7 +28,6 @@ limit_bottom = 120
 stream = ExtResource("4_q7cqn")
 volume_db = -8.21
 autoplay = true
-bus = &"Music"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=261896337]
 
