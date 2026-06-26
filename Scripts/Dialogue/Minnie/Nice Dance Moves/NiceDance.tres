@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DialogueText" format=3 uid="uid://ccd6afvefsacp"]
+
+[ext_resource type="Texture2D" uid="uid://c6keguvirtslg" path="res://Art/Characters/Minnie/Portraits/minnie_portrait2.png" id="1_h7lf4"]
+[ext_resource type="Script" uid="uid://ckgoi4gbxrupa" path="res://Scripts/Dialogue/DialogueText.gd" id="1_urjkn"]
+[ext_resource type="AudioStream" uid="uid://dab8g5pt67auk" path="res://Audio/UI/snd_txtal.wav" id="3_q5hnw"]
+
+[resource]
+script = ExtResource("1_urjkn")
+portrait = ExtResource("1_h7lf4")
+text = "* Nice dance moves."
+textSpeed = 1.5
+voiceSound = ExtResource("3_q5hnw")
+metadata/_custom_type_script = "uid://ckgoi4gbxrupa"

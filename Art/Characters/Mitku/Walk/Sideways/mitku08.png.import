@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2v2n130ui65b"
-path="res://.godot/imported/alt_clothes.png-c6c13a9d0d453af91705b03da1f786ec.ctex"
+uid="uid://dn6bot2ebqer7"
+path="res://.godot/imported/mitku08.png-33d6ce2e554919c4eb341281454131de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Mitku/alt_clothes.png"
-dest_files=["res://.godot/imported/alt_clothes.png-c6c13a9d0d453af91705b03da1f786ec.ctex"]
+source_file="res://Art/Characters/Mitku/Walk/Sideways/mitku08.png"
+dest_files=["res://.godot/imported/mitku08.png-33d6ce2e554919c4eb341281454131de.ctex"]
 
 [params]
 

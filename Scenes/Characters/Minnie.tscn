@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ccgglyt701dw8"]
 
-[ext_resource type="Texture2D" uid="uid://2v2n130ui65b" path="res://Art/Mitku/alt_clothes.png" id="1_5ffk3"]
+[ext_resource type="Texture2D" uid="uid://2v2n130ui65b" path="res://Art/Characters/Minnie/alt_clothes.png" id="1_5ffk3"]
 [ext_resource type="Script" uid="uid://dkpur5t3076sr" path="res://Scripts/Minnie/minnie.gd" id="1_j36y3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j36y3"]

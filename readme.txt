@@ -24,4 +24,19 @@ TO DO:
 	- cutscenes
 		- use animationplayer
 		- lock player actions
+			- set_can_move()
 	- saving and loading
+	- music
+		- rude buster remix
+		- death by glamour remix
+		- jr6 update
+			- it's actually kinda good
+			
+IDEAS:
+	- Shmup / Rhythm thing (Gitaroo Man?)
+		- You have a mp3 player you can use to practice stages / boss fights
+			- Leaving songs on sends you into a dream where you imagine the music video
+		- Every boss fight is the real stage where you have to play perfectly
+			- Dying sends you to the start of the game
+		- Practise until you can't get it wrong
+			- You only have to be outside your body for 3 minutes if you think about it

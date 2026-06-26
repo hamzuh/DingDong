@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dvwv4w6twrmps"
-path="res://.godot/imported/mitku01.png-3f03b53ad95d3a0da39e9d23948f7f43.ctex"
+uid="uid://dg5uavh07yw1c"
+path="res://.godot/imported/minnie_portrait4.png-27442ecfde0bb93f2f0ba01caebf7d42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Mitku/Walk/Down/mitku01.png"
-dest_files=["res://.godot/imported/mitku01.png-3f03b53ad95d3a0da39e9d23948f7f43.ctex"]
+source_file="res://Art/Characters/Minnie/Portraits/minnie_portrait4.png"
+dest_files=["res://.godot/imported/minnie_portrait4.png-27442ecfde0bb93f2f0ba01caebf7d42.ctex"]
 
 [params]
 

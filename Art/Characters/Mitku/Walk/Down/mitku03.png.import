@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btj30r8ycfoi5"
-path="res://.godot/imported/mitku03.png-ba5a91ab9eac371fda2611b1bca61875.ctex"
+path="res://.godot/imported/mitku03.png-0def3954a647880c5ced2120b57500ad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Mitku/Walk/Down/mitku03.png"
-dest_files=["res://.godot/imported/mitku03.png-ba5a91ab9eac371fda2611b1bca61875.ctex"]
+source_file="res://Art/Characters/Mitku/Walk/Down/mitku03.png"
+dest_files=["res://.godot/imported/mitku03.png-0def3954a647880c5ced2120b57500ad.ctex"]
 
 [params]
 
