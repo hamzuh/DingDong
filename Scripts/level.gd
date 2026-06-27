@@ -14,3 +14,6 @@ signal exit(room, door, body)
 @export var limit_top: int
 @export var limit_right: int
 @export var limit_bottom: int
+
+func _ready() -> void:
+	y_sort_enabled = true

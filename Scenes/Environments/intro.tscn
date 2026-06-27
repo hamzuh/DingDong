@@ -15,7 +15,7 @@ script = ExtResource("1_234s4")
 room_name = "Intro"
 theme = ExtResource("2_bfp0l")
 door_dict = Dictionary[String, Vector2]({
-"exit": Vector2(19, 92)
+"exit": Vector2(19, 106)
 })
 limit_enabled = true
 limit_left = -160

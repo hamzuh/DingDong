@@ -11,10 +11,11 @@
 y_sort_enabled = true
 script = ExtResource("1_ftiab")
 
-[node name="MapHandler" type="Node" parent="." unique_id=1622912758]
+[node name="MapHandler" type="Node2D" parent="." unique_id=1927996778]
+y_sort_enabled = true
 script = ExtResource("2_p1uko")
 
-[node name="Intro" parent="MapHandler" unique_id=1562983653 instance=ExtResource("1_daojo")]
+[node name="Intro" parent="MapHandler" unique_id=334825766 instance=ExtResource("1_daojo")]
 
 [node name="Mitku" parent="." unique_id=79927494 instance=ExtResource("2_ftiab")]
 position = Vector2(5, -24)

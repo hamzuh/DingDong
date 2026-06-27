@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueInspect" format=3 uid="uid://b38hmq1agin0q"]
+
+[ext_resource type="Script" uid="uid://b3g2p8y6eicdb" path="res://Scripts/Dialogue/DialogueInspect.gd" id="1_65eul"]
+
+[resource]
+script = ExtResource("1_65eul")
+text = "* A stack of John Woo movies."
+metadata/_custom_type_script = "uid://b3g2p8y6eicdb"

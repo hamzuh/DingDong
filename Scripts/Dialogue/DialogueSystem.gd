@@ -41,6 +41,11 @@ func play(textArray):
 			finished_texture = textRes.portrait
 	else:
 		portrait.visible = false
+		
+	if Globals.player.position.y > 50:
+		position.y = 44
+	else:
+		position.y = 200
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact") and self.visible:

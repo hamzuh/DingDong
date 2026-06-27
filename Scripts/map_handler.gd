@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 @onready var musicPlayer = $"../AudioStreamPlayer"
 @onready var current_level = $Intro
