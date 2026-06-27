@@ -2,8 +2,11 @@
 
 [ext_resource type="Texture2D" uid="uid://ca6y35dqhxtxh" path="res://Art/Characters/Minnie/Portraits/minnie_portrait0.png" id="1_p1fst"]
 [ext_resource type="Script" uid="uid://ckgoi4gbxrupa" path="res://Scripts/Dialogue/DialogueText.gd" id="1_wkaoc"]
-[ext_resource type="AudioStream" uid="uid://dab8g5pt67auk" path="res://Audio/UI/snd_txtal.wav" id="2_j6ss8"]
 [ext_resource type="Texture2D" uid="uid://bdkkgt3sk2o46" path="res://Art/Characters/Minnie/Portraits/minnie_portrait1.png" id="2_rkvro"]
+[ext_resource type="AudioStream" uid="uid://c18vwrdey0d3f" path="res://Audio/UI/Dialogue/Minnie/snd_tem.wav" id="4_qfggs"]
+[ext_resource type="AudioStream" uid="uid://cxeus8gcv6gcq" path="res://Audio/UI/Dialogue/Minnie/snd_tem2.wav" id="5_7nwku"]
+[ext_resource type="AudioStream" uid="uid://deryg6xrbr1e" path="res://Audio/UI/Dialogue/Minnie/snd_tem3.wav" id="6_tffjx"]
+[ext_resource type="AudioStream" uid="uid://bfyklw5ocdb5p" path="res://Audio/UI/Dialogue/Minnie/snd_tem4.wav" id="7_nei44"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_8qdff"]
 frames = 2
@@ -17,5 +20,5 @@ script = ExtResource("1_wkaoc")
 portrait = ExtResource("1_p1fst")
 animatedPortrait = SubResource("AnimatedTexture_8qdff")
 text = "* Seriously, have you been practising?"
-voiceSound = ExtResource("2_j6ss8")
+voiceSound = Array[AudioStream]([ExtResource("4_qfggs"), ExtResource("5_7nwku"), ExtResource("6_tffjx"), ExtResource("7_nei44")])
 metadata/_custom_type_script = "uid://ckgoi4gbxrupa"

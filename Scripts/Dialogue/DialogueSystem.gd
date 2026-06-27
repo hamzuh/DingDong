@@ -12,6 +12,8 @@ var textlength: int = 0
 var vis_char: int = 0
 var finished_texture: Texture
 
+var soundArray: Array[AudioStream]
+
 func _ready() -> void:
 	self.visible = false
 
@@ -28,12 +30,17 @@ func play(textArray):
 	timer.wait_time = (0.05 * textRes.textSpeed) * textlength
 	timer.start()
 	
-	portrait.texture = textRes.portrait
-	finished_texture = textRes.portrait
-	if textRes.animatedPortrait:
-		portrait.texture = textRes.animatedPortrait
+	soundArray = textRes.voiceSound
+	
+	if textRes.portrait:
+		portrait.visible = true
+		portrait.texture = textRes.portrait
 		finished_texture = textRes.portrait
-	sfx.stream = textRes.voiceSound
+		if textRes.animatedPortrait:
+			portrait.texture = textRes.animatedPortrait
+			finished_texture = textRes.portrait
+	else:
+		portrait.visible = false
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interact") and self.visible:
@@ -57,7 +64,8 @@ func _physics_process(delta: float) -> void:
 	if self.visible:
 		textbox.visible_ratio = 1 - (timer.time_left / timer.wait_time)
 		if vis_char < textbox.visible_characters:
-			sfx.volume_db = 0 - randf_range(0, 2)
+			sfx.volume_db = 0 - randf_range(0, 1)
+			sfx.stream = soundArray.pick_random()
 			sfx.play()
 			vis_char = textbox.visible_characters
 		if textbox.visible_ratio == 1:

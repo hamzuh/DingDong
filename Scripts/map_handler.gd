@@ -30,7 +30,7 @@ func _on_room_exit(room_name, door, body):
 	current_level.queue_free()
 	current_level = load(new_scene).instantiate()
 	current_level.exit.connect(_on_room_exit)
-	add_child(current_level)
+	call_deferred("add_child", current_level)
 	
 	body.position = current_level.door_dict[new_place[1]]
 	body.set_can_move(true)

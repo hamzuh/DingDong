@@ -3,7 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://ca6y35dqhxtxh" path="res://Art/Characters/Minnie/Portraits/minnie_portrait0.png" id="1_jvd8b"]
 [ext_resource type="Texture2D" uid="uid://bdkkgt3sk2o46" path="res://Art/Characters/Minnie/Portraits/minnie_portrait1.png" id="2_m1kbc"]
 [ext_resource type="Script" uid="uid://ckgoi4gbxrupa" path="res://Scripts/Dialogue/DialogueText.gd" id="3_ugycm"]
-[ext_resource type="AudioStream" uid="uid://dab8g5pt67auk" path="res://Audio/UI/snd_txtal.wav" id="4_ra1oo"]
+[ext_resource type="AudioStream" uid="uid://c18vwrdey0d3f" path="res://Audio/UI/Dialogue/Minnie/snd_tem.wav" id="4_ra1oo"]
+[ext_resource type="AudioStream" uid="uid://cxeus8gcv6gcq" path="res://Audio/UI/Dialogue/Minnie/snd_tem2.wav" id="5_fnea7"]
+[ext_resource type="AudioStream" uid="uid://deryg6xrbr1e" path="res://Audio/UI/Dialogue/Minnie/snd_tem3.wav" id="6_685n7"]
+[ext_resource type="AudioStream" uid="uid://bfyklw5ocdb5p" path="res://Audio/UI/Dialogue/Minnie/snd_tem4.wav" id="7_cbuce"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_fnea7"]
 frames = 2
@@ -17,5 +20,5 @@ script = ExtResource("3_ugycm")
 portrait = ExtResource("1_jvd8b")
 animatedPortrait = SubResource("AnimatedTexture_fnea7")
 text = "* This music is really loud."
-voiceSound = ExtResource("4_ra1oo")
+voiceSound = Array[AudioStream]([ExtResource("4_ra1oo"), ExtResource("5_fnea7"), ExtResource("6_685n7"), ExtResource("7_cbuce")])
 metadata/_custom_type_script = "uid://ckgoi4gbxrupa"

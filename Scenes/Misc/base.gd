@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 func _ready() -> void:
 	Input.mouse_mode = 2

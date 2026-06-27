@@ -10,20 +10,22 @@ size = Vector2(28, 8)
 size = Vector2(36, 26)
 
 [node name="StaticBody2D" type="StaticBody2D" unique_id=803149518]
+z_index = 1
+y_sort_enabled = true
 script = ExtResource("1_j36y3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=935924430]
+position = Vector2(0, -12)
 texture = ExtResource("1_5ffk3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=305354410]
 y_sort_enabled = true
-position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_j36y3")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1398108072]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1045909669]
-position = Vector2(0, 13)
+position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_6hk5u")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

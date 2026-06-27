@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://srlnr0uickgk"]
+
+[ext_resource type="Texture2D" uid="uid://2v2n130ui65b" path="res://Art/Characters/Minnie/alt_clothes.png" id="1_bn065"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwu5x"]
+size = Vector2(26, 16)
+
+[node name="Chair" type="StaticBody2D" unique_id=677434135]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=852289144]
+position = Vector2(0, -9)
+texture = ExtResource("1_bn065")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380343266]
+position = Vector2(1, 2)
+shape = SubResource("RectangleShape2D_hwu5x")
