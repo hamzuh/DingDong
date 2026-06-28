@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://ksn1idcugyha" path="res://Scripts/Levels/hallway.gd" id="1_057bq"]
 [ext_resource type="Texture2D" uid="uid://b6irgh4bivo2e" path="res://Art/Environments/hallway.png" id="1_nnfrs"]
 [ext_resource type="AudioStream" uid="uid://dciqx6dp10cm7" path="res://Audio/Music/chillinleadfixed.wav" id="2_057bq"]
+[ext_resource type="PackedScene" uid="uid://di7o4w4gnurm1" path="res://Scenes/Characters/Starwalker.tscn" id="4_x3mf6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ssogp"]
 size = Vector2(122, 480)
@@ -23,6 +24,7 @@ size = Vector2(112, 16)
 size = Vector2(96, 19)
 
 [node name="Hallway" type="StaticBody2D" unique_id=1608880529]
+y_sort_enabled = true
 script = ExtResource("1_057bq")
 room_name = "Hallway"
 theme = ExtResource("2_057bq")
@@ -67,6 +69,9 @@ shape = SubResource("RectangleShape2D_nnfrs")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BottomDoor" unique_id=586253216]
 position = Vector2(0, 236)
 shape = SubResource("RectangleShape2D_nxfbm")
+
+[node name="Starwalker" parent="." unique_id=370978552 instance=ExtResource("4_x3mf6")]
+position = Vector2(-19, -146)
 
 [connection signal="body_entered" from="TopDoor" to="." method="_on_top_door_body_entered"]
 [connection signal="body_entered" from="BottomDoor" to="." method="_on_bottom_door_body_entered"]

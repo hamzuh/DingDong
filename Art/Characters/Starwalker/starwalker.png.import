@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcl6ps4di02mj"
-path="res://.godot/imported/chairnew.png-d853e6507afbd99d9afa1a1b4ae6e727.ctex"
+uid="uid://cbdod86xwn2rj"
+path="res://.godot/imported/starwalker.png-7952341c6583af252e7c954eedfc92a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Environments/My Room/chairnew.png"
-dest_files=["res://.godot/imported/chairnew.png-d853e6507afbd99d9afa1a1b4ae6e727.ctex"]
+source_file="res://Art/Characters/Starwalker/starwalker.png"
+dest_files=["res://.godot/imported/starwalker.png-7952341c6583af252e7c954eedfc92a1.ctex"]
 
 [params]
 

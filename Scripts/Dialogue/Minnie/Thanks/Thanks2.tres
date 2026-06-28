@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="DialogueText" format=3 uid="uid://yqh8near86si"]
+
+[ext_resource type="Texture2D" uid="uid://ca6y35dqhxtxh" path="res://Art/Characters/Minnie/Portraits/minnie_portrait0.png" id="1_qbawh"]
+[ext_resource type="Texture2D" uid="uid://bdkkgt3sk2o46" path="res://Art/Characters/Minnie/Portraits/minnie_portrait1.png" id="2_ji8au"]
+[ext_resource type="Script" uid="uid://ckgoi4gbxrupa" path="res://Scripts/Dialogue/DialogueText.gd" id="3_0lumu"]
+[ext_resource type="AudioStream" uid="uid://c18vwrdey0d3f" path="res://Audio/UI/Dialogue/Minnie/snd_tem.wav" id="4_jppd8"]
+[ext_resource type="AudioStream" uid="uid://cxeus8gcv6gcq" path="res://Audio/UI/Dialogue/Minnie/snd_tem2.wav" id="5_y3hax"]
+[ext_resource type="AudioStream" uid="uid://deryg6xrbr1e" path="res://Audio/UI/Dialogue/Minnie/snd_tem3.wav" id="6_cejbw"]
+[ext_resource type="AudioStream" uid="uid://bfyklw5ocdb5p" path="res://Audio/UI/Dialogue/Minnie/snd_tem4.wav" id="7_gmjdt"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fnea7"]
+frames = 2
+frame_0/texture = ExtResource("1_qbawh")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("2_ji8au")
+frame_1/duration = 0.25
+
+[resource]
+script = ExtResource("3_0lumu")
+portrait = ExtResource("1_qbawh")
+animatedPortrait = SubResource("AnimatedTexture_fnea7")
+text = "* I only have this one sprite."
+voiceSound = Array[AudioStream]([ExtResource("4_jppd8"), ExtResource("5_y3hax"), ExtResource("6_cejbw"), ExtResource("7_gmjdt")])
+metadata/_custom_type_script = "uid://ckgoi4gbxrupa"

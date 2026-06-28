@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueInspect" format=3 uid="uid://dv82qnjadp8ad"]
+
+[ext_resource type="Script" uid="uid://b3g2p8y6eicdb" path="res://Scripts/Dialogue/DialogueInspect.gd" id="1_f5hmx"]
+
+[resource]
+script = ExtResource("1_f5hmx")
+text = "* The handwriting on the note is pretty bad, but you can just about make out:"
+metadata/_custom_type_script = "uid://b3g2p8y6eicdb"

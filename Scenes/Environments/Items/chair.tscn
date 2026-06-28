@@ -1,13 +1,18 @@
 [gd_scene format=3 uid="uid://srlnr0uickgk"]
 
-[ext_resource type="Texture2D" uid="uid://bcl6ps4di02mj" path="res://Art/Environments/My Room/chairnew.png" id="1_bn065"]
+[ext_resource type="Texture2D" uid="uid://bcl6ps4di02mj" path="res://Art/Environments/My Room/chair.png" id="1_bn065"]
+[ext_resource type="Script" uid="uid://0drsf3yoolqt" path="res://Scripts/Items/chair.gd" id="1_hwu5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwu5x"]
 size = Vector2(26, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_phe83"]
+size = Vector2(46, 28)
+
 [node name="Chair" type="StaticBody2D" unique_id=677434135]
 z_index = 1
 y_sort_enabled = true
+script = ExtResource("1_hwu5x")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=852289144]
 position = Vector2(1, -8)
@@ -16,3 +21,11 @@ texture = ExtResource("1_bn065")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1380343266]
 position = Vector2(1, 2)
 shape = SubResource("RectangleShape2D_hwu5x")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1270292198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=767924464]
+shape = SubResource("RectangleShape2D_phe83")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

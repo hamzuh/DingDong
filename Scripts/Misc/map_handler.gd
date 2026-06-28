@@ -3,6 +3,11 @@ extends Node2D
 @onready var musicPlayer = $"../AudioStreamPlayer"
 @onready var current_level = $Intro
 @onready var camera = $"../Mitku/Camera2D"
+@onready var fader = $"../CanvasModulate"
+
+var new_place
+var new_scene
+var bodyman
 
 var links: Dictionary[Array, Array] = {
 	["Intro", "exit"]: ["Hallway", "TopDoor"],
@@ -21,19 +26,24 @@ func _ready() -> void:
 	current_level.exit.connect(_on_room_exit)
 	
 func _on_room_exit(room_name, door, body):
+	bodyman = body
 	body.set_can_move(false)
+	new_place = links[[room_name, door]]
+	new_scene = room_name_scene_dict[new_place[0]]
+	fader.fade_in(self)
+	
+func proceed():
 	musicPlayer.stop()
 	
-	var new_place = links[[room_name, door]]
-	var new_scene = room_name_scene_dict[new_place[0]]
+	#var new_place = links[[room_name, door]]
+	#var new_scene = room_name_scene_dict[new_place[0]]
 	
 	current_level.queue_free()
 	current_level = load(new_scene).instantiate()
 	current_level.exit.connect(_on_room_exit)
 	call_deferred("add_child", current_level)
 	
-	body.position = current_level.door_dict[new_place[1]]
-	body.set_can_move(true)
+	bodyman.position = current_level.door_dict[new_place[1]]
 	
 	musicPlayer.stream = current_level.theme
 	musicPlayer.play()
@@ -43,3 +53,6 @@ func _on_room_exit(room_name, door, body):
 	camera.limit_top = current_level.limit_top
 	camera.limit_right = current_level.limit_right
 	camera.limit_bottom = current_level.limit_bottom
+	
+	fader.fade_out()
+	bodyman.set_can_move(true)

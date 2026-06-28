@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@onready var dialogueArray: Array[DialogueInspect] = [load("res://Scripts/Dialogue/Items/Blurays/blurays.tres"), load("res://Scripts/Dialogue/Items/Blurays/blurays2.tres")]
+@onready var dialogueArray: Array[DE] = [load("res://Scripts/Dialogue/Items/Blurays/blurays.tres"), load("res://Scripts/Dialogue/Items/Blurays/blurays2.tres"), load("res://Scripts/Dialogue/Items/Blurays/blurays3.tres")]
 
 func dialogue_start():
 	Globals.dialogue.play(dialogueArray)

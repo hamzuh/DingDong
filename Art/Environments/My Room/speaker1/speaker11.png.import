@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxkoq2roa23oa"
-path="res://.godot/imported/bluraysnew.png-4d48e8d6a6800934249e92406f13c7a3.ctex"
+uid="uid://d0bf8usxof3it"
+path="res://.godot/imported/speaker11.png-99bee39ccef95225a162fe83253062cc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Environments/My Room/bluraysnew.png"
-dest_files=["res://.godot/imported/bluraysnew.png-4d48e8d6a6800934249e92406f13c7a3.ctex"]
+source_file="res://Art/Environments/My Room/speaker1/speaker11.png"
+dest_files=["res://.godot/imported/speaker11.png-99bee39ccef95225a162fe83253062cc.ctex"]
 
 [params]
 

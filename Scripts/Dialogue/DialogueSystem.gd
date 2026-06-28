@@ -24,7 +24,7 @@ func play(textArray):
 	self.visible = true
 	textbox.text = textRes.text
 	textbox.visible_ratio = 0
-	textlength = textRes.text.length()
+	textlength = textbox.get_parsed_text().length()
 	vis_char = 0
 	
 	timer.wait_time = (0.05 * textRes.textSpeed) * textlength

@@ -4,12 +4,16 @@
 [ext_resource type="AudioStream" uid="uid://dmmc7ugihxoge" path="res://Audio/Music/FLIPSIDEMUTHAFUCKA.wav" id="2_w3fuf"]
 [ext_resource type="Texture2D" uid="uid://gkccvc2u4lqd" path="res://Art/Environments/My Room/myroom.png" id="3_hdxwg"]
 [ext_resource type="PackedScene" uid="uid://ccgglyt701dw8" path="res://Scenes/Characters/Minnie.tscn" id="4_hdxwg"]
-[ext_resource type="Texture2D" uid="uid://bef7lccwb6wpb" path="res://Art/Environments/My Room/speaker1.png" id="5_8p12y"]
+[ext_resource type="Script" uid="uid://cnh4wwa0dh5gw" path="res://Scripts/Items/speakers.gd" id="5_uem88"]
+[ext_resource type="Texture2D" uid="uid://c18evxmj4rsc4" path="res://Art/Environments/My Room/speaker1/speaker10.png" id="6_bdr82"]
 [ext_resource type="Texture2D" uid="uid://b2cw7qd0sxbq8" path="res://Art/Environments/My Room/speaker2.png" id="6_uem88"]
+[ext_resource type="Texture2D" uid="uid://d0bf8usxof3it" path="res://Art/Environments/My Room/speaker1/speaker11.png" id="7_iptw1"]
 [ext_resource type="Texture2D" uid="uid://curia3ja10jd4" path="res://Art/Environments/My Room/blujeans.png" id="8_uem88"]
 [ext_resource type="PackedScene" uid="uid://pc7svp36b56y" path="res://Scenes/Environments/Items/blurays.tscn" id="9_42j5e"]
 [ext_resource type="Texture2D" uid="uid://dx45f8iofemve" path="res://Art/Environments/My Room/note.png" id="9_bdr82"]
 [ext_resource type="PackedScene" uid="uid://srlnr0uickgk" path="res://Scenes/Environments/Items/chair.tscn" id="9_n0cat"]
+[ext_resource type="Script" uid="uid://bg1n3joat71i2" path="res://Scripts/Items/jeans.gd" id="10_bdr82"]
+[ext_resource type="Script" uid="uid://cjamkicee4kbs" path="res://Scripts/Items/note.gd" id="12_iptw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_22upm"]
 size = Vector2(140, 77)
@@ -32,11 +36,42 @@ size = Vector2(78, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gevid"]
 size = Vector2(72, 25)
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_75lgn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bdr82")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_bdr82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iptw1")
+}],
+"loop": true,
+"name": &"playing",
+"speed": 5.0
+}]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_75lgn"]
 size = Vector2(26, 45)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unuin"]
 size = Vector2(23, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bdr82"]
+size = Vector2(36, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iptw1"]
+size = Vector2(38.5, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lncy"]
+size = Vector2(29, 31)
 
 [node name="My Room" type="StaticBody2D" unique_id=1931396478]
 y_sort_enabled = true
@@ -87,15 +122,18 @@ position = Vector2(0, -116.5)
 shape = SubResource("RectangleShape2D_gevid")
 
 [node name="StaticBody2D" parent="." unique_id=803149518 instance=ExtResource("4_hdxwg")]
-position = Vector2(-88, -5)
+position = Vector2(-92, -5)
 
 [node name="Speakers" type="StaticBody2D" parent="." unique_id=994633207]
 z_index = 1
 y_sort_enabled = true
+script = ExtResource("5_uem88")
 
-[node name="Sprite2D" type="Sprite2D" parent="Speakers" unique_id=1446976369]
-position = Vector2(104, -61)
-texture = ExtResource("5_8p12y")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Speakers" unique_id=107065578]
+position = Vector2(103, -61)
+sprite_frames = SubResource("SpriteFrames_75lgn")
+animation = &"playing"
+frame_progress = 0.1740716
 
 [node name="Speaker2" type="Sprite2D" parent="Speakers" unique_id=1048061870]
 position = Vector2(132, -30)
@@ -109,18 +147,43 @@ shape = SubResource("RectangleShape2D_75lgn")
 position = Vector2(128.5, -18)
 shape = SubResource("RectangleShape2D_unuin")
 
+[node name="Area2D" type="Area2D" parent="Speakers" unique_id=330225825]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Speakers/Area2D" unique_id=90483643]
+position = Vector2(85, -41)
+shape = SubResource("RectangleShape2D_bdr82")
+
 [node name="Jeans" type="Sprite2D" parent="." unique_id=1922485050]
 z_index = 1
 texture = ExtResource("8_uem88")
+script = ExtResource("10_bdr82")
+
+[node name="Area2D" type="Area2D" parent="Jeans" unique_id=1455039288]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jeans/Area2D" unique_id=1191393284]
+position = Vector2(48.25, 28)
+shape = SubResource("RectangleShape2D_iptw1")
 
 [node name="Note" type="Sprite2D" parent="." unique_id=1895813295]
-z_index = 1
 texture = ExtResource("9_bdr82")
+script = ExtResource("12_iptw1")
+
+[node name="Area2D" type="Area2D" parent="Note" unique_id=485397103]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Note/Area2D" unique_id=1698734285]
+position = Vector2(-57, -52)
+shape = SubResource("RectangleShape2D_0lncy")
 
 [node name="Chair" parent="." unique_id=677434135 instance=ExtResource("9_n0cat")]
-position = Vector2(-42, 52)
+position = Vector2(-51, 52)
 
 [node name="Blurays" parent="." unique_id=167353526 instance=ExtResource("9_42j5e")]
-position = Vector2(86, 79)
+position = Vector2(98, 73)
 
 [connection signal="body_entered" from="TopDoor" to="." method="_on_top_door_body_entered"]
+[connection signal="body_entered" from="Speakers/Area2D" to="Speakers" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Speakers/Area2D" to="Speakers" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Jeans/Area2D" to="Jeans" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Jeans/Area2D" to="Jeans" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Note/Area2D" to="Note" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Note/Area2D" to="Note" method="_on_area_2d_body_exited"]

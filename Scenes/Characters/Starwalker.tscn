@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://di7o4w4gnurm1"]
+
+[ext_resource type="Texture2D" uid="uid://cbdod86xwn2rj" path="res://Art/Characters/Starwalker/starwalker.png" id="1_7r2f8"]
+[ext_resource type="Script" uid="uid://cp6lpp6xr2kf7" path="res://Scripts/Characters/Starwalker.gd" id="1_pyipx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pyipx"]
+size = Vector2(26, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3tiv"]
+size = Vector2(34, 20.5)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=370978552]
+z_index = 1
+y_sort_enabled = true
+script = ExtResource("1_pyipx")
+
+[node name="Starwalker" type="Sprite2D" parent="." unique_id=1761363140]
+position = Vector2(4, -15)
+texture = ExtResource("1_7r2f8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1902516927]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_pyipx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1947649003]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=9480611]
+shape = SubResource("RectangleShape2D_o3tiv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

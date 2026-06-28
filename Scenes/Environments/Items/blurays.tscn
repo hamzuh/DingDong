@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://pc7svp36b56y"]
 
-[ext_resource type="Texture2D" uid="uid://bxkoq2roa23oa" path="res://Art/Environments/My Room/bluraysnew.png" id="1_l68p7"]
+[ext_resource type="Texture2D" uid="uid://bxkoq2roa23oa" path="res://Art/Environments/My Room/blurays.png" id="1_l68p7"]
 [ext_resource type="Script" uid="uid://chmuvpdcr15ks" path="res://Scripts/Items/blurays.gd" id="1_r4q47"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4q47"]

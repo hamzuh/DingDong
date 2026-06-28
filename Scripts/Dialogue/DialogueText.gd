@@ -1,4 +1,4 @@
-class_name DialogueText extends Resource
+class_name DialogueText extends DE
 
 @export var portrait: Texture
 @export var animatedPortrait: AnimatedTexture

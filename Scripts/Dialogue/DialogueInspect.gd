@@ -1,4 +1,4 @@
-class_name DialogueInspect extends Resource
+class_name DialogueInspect extends DE
 
 var portrait: Texture = null
 var animatedPortrait: AnimatedTexture = null

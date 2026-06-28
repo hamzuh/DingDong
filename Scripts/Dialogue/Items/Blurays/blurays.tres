@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_65eul")
-text = "* A stack of John Woo movies."
+text = "* A stack of Blu-rays, some music CDs and Xbox 360 games.
+* For some reason there's multiple copies of Rocky IV."
 metadata/_custom_type_script = "uid://b3g2p8y6eicdb"

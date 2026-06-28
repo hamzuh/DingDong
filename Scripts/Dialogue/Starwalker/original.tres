@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueInspect" format=3 uid="uid://dld1cihyb2pql"]
+
+[ext_resource type="Script" uid="uid://b3g2p8y6eicdb" path="res://Scripts/Dialogue/DialogueInspect.gd" id="1_uxn3h"]
+
+[resource]
+script = ExtResource("1_uxn3h")
+text = "* I'm the original				[color=#F7FF17]Starwalker[/color]"
+metadata/_custom_type_script = "uid://b3g2p8y6eicdb"

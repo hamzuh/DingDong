@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="DialogueText" format=3 uid="uid://ba8oy2qwyty7s"]
+
+[ext_resource type="Texture2D" uid="uid://dg5uavh07yw1c" path="res://Art/Characters/Minnie/Portraits/minnie_portrait4.png" id="1_c803c"]
+[ext_resource type="Texture2D" uid="uid://dy7josmd05j83" path="res://Art/Characters/Minnie/Portraits/minnie_portrait3.png" id="2_yuhup"]
+[ext_resource type="Script" uid="uid://ckgoi4gbxrupa" path="res://Scripts/Dialogue/DialogueText.gd" id="3_dxhhs"]
+[ext_resource type="AudioStream" uid="uid://c18vwrdey0d3f" path="res://Audio/UI/Dialogue/Minnie/snd_tem.wav" id="4_l6t5n"]
+[ext_resource type="AudioStream" uid="uid://cxeus8gcv6gcq" path="res://Audio/UI/Dialogue/Minnie/snd_tem2.wav" id="5_kyas4"]
+[ext_resource type="AudioStream" uid="uid://deryg6xrbr1e" path="res://Audio/UI/Dialogue/Minnie/snd_tem3.wav" id="6_httkw"]
+[ext_resource type="AudioStream" uid="uid://bfyklw5ocdb5p" path="res://Audio/UI/Dialogue/Minnie/snd_tem4.wav" id="7_pifuj"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_yy73k"]
+frames = 2
+frame_0/texture = ExtResource("1_c803c")
+frame_0/duration = 0.13
+frame_1/texture = ExtResource("2_yuhup")
+frame_1/duration = 0.13
+
+[resource]
+script = ExtResource("3_dxhhs")
+portrait = ExtResource("1_c803c")
+animatedPortrait = SubResource("AnimatedTexture_yy73k")
+text = "* WHY WOULD YOU TURN IT BACK ON?!?!"
+textSpeed = 0.30000000000000004
+voiceSound = Array[AudioStream]([ExtResource("4_l6t5n"), ExtResource("5_kyas4"), ExtResource("6_httkw"), ExtResource("7_pifuj")])
+metadata/_custom_type_script = "uid://ckgoi4gbxrupa"

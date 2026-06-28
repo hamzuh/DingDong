@@ -1,4 +1,7 @@
 TO DO:
+	- animations
+		- speakers bouncing
+		- talking npcs
 	- idle animations
 		- ear flick
 		- blink

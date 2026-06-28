@@ -1,8 +1,25 @@
-[gd_resource type="Resource" script_class="DialogueInspect" format=3 uid="uid://do35coe4aveo7"]
+[gd_resource type="Resource" script_class="DialogueText" format=3 uid="uid://b6l6rkmgwyceh"]
 
-[ext_resource type="Script" uid="uid://b3g2p8y6eicdb" path="res://Scripts/Dialogue/DialogueInspect.gd" id="1_ljc6d"]
+[ext_resource type="Texture2D" uid="uid://ca6y35dqhxtxh" path="res://Art/Characters/Minnie/Portraits/minnie_portrait0.png" id="1_rb5qj"]
+[ext_resource type="Texture2D" uid="uid://bdkkgt3sk2o46" path="res://Art/Characters/Minnie/Portraits/minnie_portrait1.png" id="2_nci2v"]
+[ext_resource type="Script" uid="uid://ckgoi4gbxrupa" path="res://Scripts/Dialogue/DialogueText.gd" id="3_hyeik"]
+[ext_resource type="AudioStream" uid="uid://c18vwrdey0d3f" path="res://Audio/UI/Dialogue/Minnie/snd_tem.wav" id="4_e6ht1"]
+[ext_resource type="AudioStream" uid="uid://cxeus8gcv6gcq" path="res://Audio/UI/Dialogue/Minnie/snd_tem2.wav" id="5_yki2e"]
+[ext_resource type="AudioStream" uid="uid://deryg6xrbr1e" path="res://Audio/UI/Dialogue/Minnie/snd_tem3.wav" id="6_1dyau"]
+[ext_resource type="AudioStream" uid="uid://bfyklw5ocdb5p" path="res://Audio/UI/Dialogue/Minnie/snd_tem4.wav" id="7_tbbu7"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_fnea7"]
+frames = 2
+frame_0/texture = ExtResource("1_rb5qj")
+frame_0/duration = 0.25
+frame_1/texture = ExtResource("2_nci2v")
+frame_1/duration = 0.25
 
 [resource]
-script = ExtResource("1_ljc6d")
-text = "* I like that."
-metadata/_custom_type_script = "uid://b3g2p8y6eicdb"
+script = ExtResource("3_hyeik")
+portrait = ExtResource("1_rb5qj")
+animatedPortrait = SubResource("AnimatedTexture_fnea7")
+text = "* You have Shin Godzilla on disc?
+* Nice."
+voiceSound = Array[AudioStream]([ExtResource("4_e6ht1"), ExtResource("5_yki2e"), ExtResource("6_1dyau"), ExtResource("7_tbbu7")])
+metadata/_custom_type_script = "uid://ckgoi4gbxrupa"

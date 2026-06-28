@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://7tokkplqte2g"]
 
-[ext_resource type="Script" uid="uid://d32s1pn7eokyr" path="res://Scripts/Player/mitku.gd" id="1_fq3pm"]
+[ext_resource type="Script" uid="uid://d32s1pn7eokyr" path="res://Scripts/Characters/Player/mitku.gd" id="1_fq3pm"]
 [ext_resource type="Texture2D" uid="uid://dvwv4w6twrmps" path="res://Art/Characters/Mitku/Walk/Down/mitku01.png" id="2_ixjpe"]
 [ext_resource type="Texture2D" uid="uid://csgy8wemm28y8" path="res://Art/Characters/Mitku/Walk/Sideways/mitku05.png" id="3_iytfs"]
 [ext_resource type="Texture2D" uid="uid://bnum2arv7uct3" path="res://Art/Characters/Mitku/Walk/Up/mitku11.png" id="4_5rf40"]

@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="DialogueInspect" format=3 uid="uid://dwjl513wnktd3"]
+
+[ext_resource type="Script" uid="uid://b3g2p8y6eicdb" path="res://Scripts/Dialogue/DialogueInspect.gd" id="1_mxbhs"]
+
+[resource]
+script = ExtResource("1_mxbhs")
+text = "* You turn off the speakers."
+metadata/_custom_type_script = "uid://b3g2p8y6eicdb"
